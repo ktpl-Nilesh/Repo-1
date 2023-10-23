@@ -1,0 +1,9 @@
+name: Starter Workflow Demo
+
+on:
+  label:
+    types:
+      - created
+  push:
+    branches:
+      - nilesh
