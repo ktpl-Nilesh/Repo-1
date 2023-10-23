@@ -1,9 +1,18 @@
 name: Starter Workflow Demo
 
 on:
-  label:
-    types:
-      - created
   push:
     branches:
-      - nilesh
+      - main 
+      
+jobs:
+  create-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create and switch to a new branch
+        run: |
+          git checkout -b nilesh
+          git push origin nilesh
